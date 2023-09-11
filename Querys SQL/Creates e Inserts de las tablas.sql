@@ -1,19 +1,19 @@
 -- Se crea la tabla Usuarios
 CREATE TABLE [Challenge].[dbo].[Usuarios] (
     id int identity(1,1) primary key,
-    fechaCreacion date
+    fechaCreacion date NOT NULL
 );
 
 
 -- Se crea la tabla Pagos
 CREATE TABLE [Challenge].[dbo].[Pagos] (
     id int identity(1,1) primary key,
-    idUsuario int,
-    pais varchar(25),
-    monedaLocal varchar(25),
-    totalMonedaLocal float,
-    fecha date,
-    estado tinyint
+    idUsuario int NOT NULL,
+    pais varchar(25) NOT NULL,
+    monedaLocal varchar(25) NOT NULL,
+    totalMonedaLocal float NOT NULL,
+    fecha date NOT NULL,
+    estado tinyint NOT NULL
 );
 
 
